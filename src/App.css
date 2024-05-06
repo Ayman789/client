@@ -1,38 +1,181 @@
-.App {
+.ChatApp {
+  background: #fff;
+  color: #212121;
+  font-family: "Times New Roman", sans-serif;
+  display: grid;
+  place-items: center;
+  margin-top: 300px;
+}
+body {
+  margin: 0%;
+  padding: 0%;
+}
+
+.ChatterBoxJoin {
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ChatterBoxJoin h1 {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 40px;
+  text-decoration: underline;
+}
+.ChatterBoxJoin input {
+  width: 210px;
+  height: 40px;
+  border: 2px solid #991010;
+  padding: 4px;
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ChatterBoxJoin button {
+  width: 210px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  background: #c01010;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.ChatterBoxJoin button:hover {
+  background: #5900ff;
+}
+
+.ChatterBoxUI {
+  width: 300px;
+  height: 420px;
+  margin-top: 0px;
+  margin-bottom: 100px;
+}
+
+.ChatterBoxUI p {
+margin: 0;
+}
+.ChatterBoxUI .ChatterBoxHeader {
+  background: #020202;
+  position: relative;
+}
+.ChatterBoxUI .ChatterBoxHeader p {
+  display: block;
+  color: #fc0000;
+  font-weight: 700;
+  line-height: 50px;
+  text-align: center;
+}
+
+.ChatterBoxUI .ChatterBoxBody {
+  height: calc(400px);
+  border: 1px solid #000000;
+  background: #fff;
+
+  position: relative;
+}
+.ChatterBoxUI .ChatterBoxBody .MessageRepository {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.ChatterBoxUI .ChatterBoxBody .MessageRepository::-webkit-scrollbar {
+  display: none;
+}
+.ChatterBoxUI .ChatterBoxBody .message {
+  height: auto;
+  padding: 10px;
   display: flex;
-  flex-direction: column;
+}
+
+.ChatterBoxUI .ChatterBoxBody .message .MessageBox {
+  width: auto;
+  height: auto;
+  min-height: 30px;
+  max-width: 130px;
+  background-color: #19eff7;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-right: 2px;
+  padding-left: 2px;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
-.App-link {
-  color: #61dafb;
+.ChatterBoxUI .ChatterBoxBody .message .MessageContents {
+  display: flex;
+  font-size: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ChatterBoxUI .ChatterBoxFooter {
+  height: 40px;
+  border: 1px solid #263238;
+  border-top: none;
+  display: flex;
+}
+
+.ChatterBoxUI .ChatterBoxFooter input {
+  flex: 90%;
+  border: 0;
+  height: 100%;
+  padding: 0 10px;
+  font-size: 17px;
+  border-right: 2px dotted #000000;
+
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+.ChatterBoxUI .ChatterBoxFooter button {
+  border: 0;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  flex: 15%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  font-size: 25px;
+  color: lightgray;
+}
+
+.ChatterBoxUI .ChatterBoxFooter button:hover {
+  color: #10cc19;
+}
+
+#User {
+  justify-content: flex-start;
+}
+
+#User .MessageBox {
+  justify-content: flex-start;
+}
+
+#User .MessageContents {
+  justify-content: flex-start;
+  margin-left: 2px;
+}
+
+#Chatter {
+  justify-content: flex-end;
+}
+
+#Chatter .MessageBox {
+  justify-content: flex-end;
+  background-color: rgb(250, 45, 30);
+}
+
+#Chatter .MessageContents {
+  justify-content: flex-end;
+  margin-right: 2px;
 }
